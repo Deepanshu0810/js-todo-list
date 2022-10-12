@@ -1,0 +1,142 @@
+:root {
+	--dark: #4f6385;
+	--darker: #253853;
+	--darkest: #171e2c;
+	--grey: #3d434e;
+	--pink: #EC4899;
+	--purple: #8B5CF6;
+	--light: #EEE;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+	box-sizing: border-box;
+    font-family: 'Fira sans', sans-serif;
+	background-color: var(--dark);
+	display: flex;
+	justify-content: center;
+}
+
+h1,h2,h3,h4,h5,h6{
+	margin: 0;
+}
+
+input,button{
+	appearance: none;
+	background: none;
+	outline: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+.main-container{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-content: center;
+	height: 100vh;
+	width: 800px;
+	color: var(--light);
+}
+
+header{
+	padding: 20px;
+}
+header h1{
+	margin-bottom: 10px;
+	color: var(--grey);
+}
+
+#new-task-form{
+	display: flex;
+	align-items: center;
+}
+
+#new-task-input{
+	flex: 1 1 0%;
+	background-color: var(--darker);
+	border-radius: 10px;
+	padding: 10px;
+	margin-right: 25px;
+	font-size: 20px;
+	color: var(--purple);
+}
+#new-task-input::placeholder{
+	color:var(--purple)
+
+}
+
+#new-task-submit{
+	color: var(--pink);
+	font-weight: 800;
+	background-image: linear-gradient(to right,var(--pink),var(--purple));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 20px;
+	cursor: pointer;
+	transition: 0.1s;
+}
+#new-task-submit:active{
+	transform: scale(0.9);
+}
+
+main{
+	padding: 20px;
+}
+
+.task-list h2{
+	color: var(--grey);
+	margin-bottom: 10px;
+}
+
+#tasks{
+	display: flex;
+	flex-direction: column;
+}
+
+.task{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 10px;
+	margin: 10px 0;
+
+}
+.content{
+	width: 75%;
+}
+.text{
+	color: var(--light);
+	background-color: var(--darkest);
+	padding: 10px;
+	font-size: 20px;
+	width: 100%;
+	transition: 0.2s;
+	margin: 0;
+	border-radius:10px ;
+	min-height: 22px;
+}
+
+.text:not(:read-only){
+	color: var(--pink);
+}
+
+
+.edit,.delete{
+	padding: 5px;
+	margin: 0 2px;
+	cursor: pointer;
+	background-color: var(--light);
+	border-radius: 10px;
+	transition: 0.3s;
+}
+.edit:active,.delete:active{
+	transform: scale(0.9);
+}
+
+
+.edit img,.delete img{
+	width: 25px;
+}
